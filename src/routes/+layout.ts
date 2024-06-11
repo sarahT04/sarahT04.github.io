@@ -3,6 +3,8 @@
 import { initializeFirebase } from '$lib/firebase';
 import { browser } from '$app/environment';
 
+export const prerender = true;
+
 export async function load({ url }) {
     if (browser) {
         try {
