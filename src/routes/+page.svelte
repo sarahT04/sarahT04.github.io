@@ -1,89 +1,106 @@
 <script lang="ts">
-	import Navbar from '$components/Navbar.svelte';
-	import Header from '$components/Header.svelte';
+	import Sarah from '$lib/images/sarah pfp.jpg';
+	import Github from '$lib/svg/Github.svelte';
+	import Linkedin from '$lib/svg/Linkedin.svelte';
+	import ExperiencesCard from '$components/ExperiencesCard.svelte';
 
-	const languagesData = [
-		{
-			href: 'https://github.com/sarahT04?tab=repositories&q=&type=public&language=javascript&sort=',
-			name: 'JS'
-		},
-		{
-			href: 'https://github.com/sarahT04?tab=repositories&q=&type=public&language=svelte&sort=',
-			name: 'Svelte'
-		},
-		{
-			href: 'https://github.com/sarahT04?tab=repositories&q=&type=public&language=python&sort=',
-			name: 'Python'
-		},
-		{
-			href: 'https://github.com/sarahT04?tab=repositories&q=&type=public&language=typescript&sort=',
-			name: 'TS'
-		}
-	];
+	import { experiences, projects, organizations, certificates } from '../data';
 
-	const firstDivide = languagesData.slice(0, languagesData.length / 2);
-	const lastDivide = languagesData.slice(languagesData.length / 2, languagesData.length);
+	const labels = ['experiences', 'projects', 'organizations', 'certificates'] as const;
+	const data = { experiences, projects, organizations, certificates };
+	let currentNav: keyof typeof data = labels[0];
+
+	function capitalize(str: string) {
+		return str.charAt(0).toUpperCase() + str.slice(1);
+	}
 </script>
 
-<Header />
-<Navbar />
+<div class="flex flex-col lg:flex-row overflow-hidden">
+	<header class="parent-class pt-5 pb-2 lg:pb-36 px-6 lg:pl-16 w-full lg:w-1/3 justify-center">
+		<section class="flex flex-col gap-2 rounded-2xl">
+			<img
+				src={Sarah}
+				alt="A back shot of Sarah looking at faraway"
+				class="w-36 lg:w-48 rounded-xl self-center"
+			/>
+			<div class="mt-4 flex flex-col items-center justify-center">
+				<h1 class="text-3xl lg:text-4xl text-center">
+					Hi! I'm <span class="text-main-orange font-semibold">Sarah Tan</span> :)
+				</h1>
+				<h3 class="mt-2 mb-3 text-center italic">A polygot, globalized and carefree thinking addict</h3>
+				<div class="flex items-center text-center gap-3 mt-auto mb-5">
+					<a href="https://github.com/sarahT04" title="sarahT04 on Github" class="text-main-orange"
+						><Github /></a
+					>
+					<a
+						class="text-main-orange"
+						href="https://www.linkedin.com/in/sarah-tanujaya-b9495a1b4/"
+						title="Sarah Tanujaya on Linkedin"
+					>
+						<Linkedin />
+					</a>
+				</div>
+			</div>
+			<ExperiencesCard
+				date="09/2023 - 06/2027"
+				title="Bachelor of Computer Science"
+				organization="China University of Geosciences"
+				place="Wuhan, Hubei, China"
+				description={[
+					'Chinese Government Scholarship Awardee',
+					'Classes conducted in Chinese (Simplified)',
+					'See all of my <a href="#" class="underline hover:text-main-orange">classwork projects</a>'
+				]}
+			/>
+			<ExperiencesCard
+				date="09/2023 - Present"
+				title="Software Engineer"
+				organization="Beneran Indonesia (NGO)"
+				place="Jakarta, Indonesia, Online"
+				description={[
+					'Full Stack Developer for their LMS Website<br />pusakawan.id and their back-office<br />website for the LMS',
+					'Current maintainer of their Android<br />application: Pusakawan'
+				]}
+			/>
+		</section>
+	</header>
 
-<main class="parent-class items-center flex-col mt-5">
-	<section class="section glassmorphism rounded-sm">
-		<h1>
-			I'm a software developer working as a full-stack. <br /><br/>I have a general knowledge in everything: JS
-			or TS, Next or Svelte, Django or Serverless, MySQL or NoSQL, Scripting, Flutter, AI <br />You name
-			it.
-		</h1>
-	</section>
-	<section class="section glassmorphism rounded-sm">
-		<table>
-			<tr>
-				<td class="text-main-orange">2023 - 2027</td>
-				<td class="whitespace-pre"
-					>: CSC Scholarship awardee, CS degree, <a
-						href="https://www.instagram.com/studyatcug/"
-						title="Check CUG's Instagram">CUG (Wuhan)</a
-					></td
-				>
-			</tr>
-			<tr>
-				<td class="text-main-orange">2023 - present</td>
-				<td class="whitespace-pre"
-					>: Part-time software developer, <a
-						href="https://www.instagram.com/beneran.indonesia/"
-						title="Check Beneran Indonesia's instagram">Beneran Indonesia</a
-					></td
-				>
-			</tr>
-		</table>
-		<br />
-		<h3>Looking forward into getting new experiences!</h3>
-	</section>
-	<section class="section glassmorphism rounded-sm">
-		<h3>Find some of my projects in Github:</h3>
-		<br />
-		<div class="flex justify-evenly">
-			<div>
-				{#each firstDivide as languageData}
-					<li>
-						<a href={languageData.href}>{languageData.name}</a>
-					</li>
+	<main class="parent-class items-center flex-col mt-5 w-full lg:w-2/3 px-6 lg:px-0">
+		<section class="section glassmorphism w-full lg:w-3/4">
+			<p class="text-main-orange font-semibold">About me</p>
+			<h1 class="text-sm lg:text-base">
+				Sarah Tan is an Indonesian nationality that is currently living in Wuhan, China. <br />I am
+				a polygot, globalized and multi-disciplinary person. I work with a lot of stuff that ranges
+				from humanities to technology. Discuss with me about multiple topics!
+				<br /><br />
+				I speak 3 languages: Indonesian (Fluent), English (C1), Chinese Simplified (HSK4)
+				<br /><br />
+				Currently an international student in Wuhan, China and a Software Engineer in Beneran Indonesia
+				(NGO) whose focus is in building their LMS website and their application that does gamification
+				for ethics education.
+			</h1>
+		</section>
+
+		<nav class="section glassmorphism w-full lg:w-3/4 py-4 px-2">
+			<div class="flex flex-wrap justify-around gap-2 lg:gap-0">
+				{#each labels as label}
+					<button
+						type="button"
+						class={`cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.03] hover:text-main-orange text-sm lg:text-base ${
+							currentNav === label ? 'text-main-orange' : ''
+						}`}
+						on:click={() => (currentNav = label)}
+					>
+						{capitalize(label)}
+					</button>
 				{/each}
 			</div>
-			<div>
-				{#each lastDivide as languageData}
-					<li>
-						<a href={languageData.href}>{languageData.name}</a>
-					</li>
-				{/each}
-			</div>
-		</div>
-	</section>
-</main>
+		</nav>
 
-<style>
-	td {
-		padding-right: 0.3rem;
-	}
-</style>
+		<section class="section glassmorphism w-full lg:w-3/4">
+			{#each data[currentNav] as experience}
+				<ExperiencesCard {...experience} />
+			{/each}
+		</section>
+	</main>
+</div>

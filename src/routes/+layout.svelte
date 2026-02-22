@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { onAuthStateChanged } from 'firebase/auth';
 	import '../app.css';
-	import { session } from '$lib/session';
-	import { PUBLIC_ADMIN_EMAIL } from '$env/static/public';
-	import { auth } from '$lib/firebase';
 	let sky: HTMLElement | null = null;
 
 	const random = (range: number) => Math.floor(Math.random() * range) + 1;
@@ -38,32 +34,6 @@
 
 	onMount(() => {
 		paintStars();
-		if (auth) {
-			onAuthStateChanged(auth, (user) => {
-				if (!user) {
-					session.update(() => {
-						return {
-							user: null,
-							loggedIn: false,
-							isAdmin: false
-						};
-					});
-					return false;
-				}
-				const loggedIn = !!user && user?.emailVerified;
-				const isAdmin = loggedIn ?? user.email === PUBLIC_ADMIN_EMAIL;
-				session.update(() => {
-					return {
-						user,
-						loggedIn,
-						isAdmin
-					};
-				});
-				return true;
-			});
-		} else {
-			new Error('Firebase Auth not initialized');
-		}
 	});
 </script>
 

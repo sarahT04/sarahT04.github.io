@@ -10,15 +10,11 @@
     }
 
     .parent-class {
-        @apply flex justify-center relative z-10
-    }
-
-    .child-class {
-        @apply flex gap-6 w-2/5 my-7 p-2
+        @apply flex relative z-10
     }
 
     .section {
-        @apply p-3 m-2 w-2/5
+        @apply w-full p-6 rounded-md my-3
     }
 
     .button-main {
