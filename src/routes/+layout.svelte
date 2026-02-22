@@ -1,9 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import '../app.css';
-
-	export const prerender = true
-	
 	let sky: HTMLElement | null = null;
 
 	const random = (range: number) => Math.floor(Math.random() * range) + 1;
