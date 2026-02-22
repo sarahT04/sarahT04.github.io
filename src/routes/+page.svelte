@@ -16,7 +16,7 @@
 </script>
 
 <div class="flex flex-col lg:flex-row overflow-hidden">
-	<header class="parent-class pt-5 pb-2 lg:pb-36 px-6 lg:pl-16 w-full lg:w-1/3 justify-center">
+<header class="parent-class pt-5 pb-2 lg:pb-36 px-6 lg:pl-16 w-full lg:w-1/3 justify-center">
 		<section class="flex flex-col gap-2 rounded-2xl">
 			<img
 				src={Sarah}
