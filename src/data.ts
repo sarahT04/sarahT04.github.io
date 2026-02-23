@@ -7,6 +7,14 @@ type Experience = {
     skills?: Array<string>;
 };
 
+type HrefifyProps = { title: string, link: string, child: string, className?: string }
+
+const hrefify = ({ title, link, child, className }: HrefifyProps) =>
+    `<a href='${link}'
+        class="on-hover-animation underline ${className}" title="${title}">
+        ${child}
+    </a>`
+
 export const experiences: Experience[] = [
     {
         // TODO
@@ -15,8 +23,16 @@ export const experiences: Experience[] = [
         organization: 'Beneran Indonesia (NGO)',
         place: 'Jakarta, Indonesia · Remote',
         description: [
-            "Sole full stack developer for their Learning Management System (LMS) Website: pusakawan.id with Django, Next.js (TypeScript), MaterialUI, PostgreSQL, AWS EB & S3. Features: authentication, payment gateway (Xendit), and Articulate Storyline embed",
-            "Current developer for their LMS back-office website with React (TypeScript + Vite), Refine.js, shadcn",
+            `Sole full stack developer for their Learning Management System (LMS) Website: 
+            ${hrefify({
+                child: "pusakawan.id",
+                link: "https://pusakawan.id/",
+                title: "Pusakawan",
+                className: "hover:mx-1"
+            })}
+             with Django, Next.js (TypeScript), MaterialUI, PostgreSQL, AWS EB & S3. <br />
+             Features: authentication, payment gateway (Xendit), and Articulate Storyline embed`,
+            "Current developer for their LMS back-office website with React (TypeScript + Vite), Refine.js & shadcn",
             "Current maintainer of their Android application: Pusakawan, an app that xx using Flutter.",
             "Creates internal automation scripts for company purposes using Python and JavaScript."
         ],
@@ -44,7 +60,7 @@ export const experiences: Experience[] = [
         description: [
             "Translated key business documents (e.g., contracts, proposals, ppt) from Indonesian to Chinese and English, and vice versa, ensuring accuracy and maintaining the original professional tone.",
             "Wrote e-mails and creating business documents in both English and Indonesian towards the Indonesian stakeholders, facilitating clear communication and supporting successful negotiations.",
-            "Involved in making digital posters, making cooperation with polytechnics, and becoming an HR for a Job Fair for Indonesian students"
+            "Involved in making digital posters, making cooperation with polytechnics, and becoming an HR for a Job Fair in multiple polytechnics in Indonesia"
         ],
         skills: [
             "Translation",
@@ -137,58 +153,114 @@ export const projects: Experience[] = [
         date: "02/2026",
         title: "Sarah's Snaps",
         organization: "My photography portofolio",
-        place: "https://sarahs-snaps.vercel.app/",
+        place: hrefify({
+            title: "Go to Sarah's Snaps",
+            link: "https://sarahs-snaps.vercel.app/",
+            child: "https://sarahs-snaps.vercel.app/",
+        }),
         description: [
-            "My photography portofolio"
+            "See how I see different countries. All shot from Xiaomi 14 Ultra"
+        ],
+        skills: [
+            "Astro", "MDX", "ImageKit", "Photography"
         ]
     },
     {
         date: "09/2023 - Present",
         title: "Classworks",
-        organization: "My homework and notes from university class projects that I find interesting",
-        place: "https://sarahs-classwork.vercel.app/",
+        organization: "My homework and notes from university classes and projects that I find interesting",
+        place: hrefify({
+            title: "Go to see my classworks",
+            link: "https://sarahs-classwork.vercel.app/",
+            child: "https://sarahs-classwork.vercel.app/",
+        }),
         description: [
-            "My classworks"
+            "My classworks. Mostly accomplishing projects using C++ and Python"
+        ],
+        skills: [
+            "C++", "Python", "Notetaking"
         ]
     },
     {
         date: "",
         title: "Advent of Code",
         organization: "Solutions for Advent of Code using Python",
-        place: "https://github.com/sarahT04/advent-of-code",
-        description: []
+        place: hrefify({
+            title: "Go to Github repository",
+            link: "https://github.com/sarahT04/advent-of-code",
+            child: "https://github.com/sarahT04/advent-of-code",
+        }),
+        description: [
+            "Currently available: Year 2015"
+        ],
+        skills: [
+            "Python", "Puzzle Solving"
+        ]
     },
 
     {
         date: "04/2023",
         title: "META Front-End Capstone",
         organization: "Front-End Capstone project for META's Front-End Developer Certification",
-        place: "https://github.com/sarahT04/meta-capstone",
-        description: []
+        place: hrefify({
+            title: "Go to Github repository",
+            link: "https://github.com/sarahT04/meta-capstone",
+            child: "https://github.com/sarahT04/meta-capstone",
+        }),
+        description: [
+            "Little Lemon is a fictional restaraurant that integrates their business into the online platform.",
+            "A mockup website of restaurant's background and table reservation"
+        ],
+        skills: [
+            "React", "Figma"
+        ]
     },
 
     {
         date: "03/2023",
         title: "Reports",
-        organization: "A simple CRUD website for teacher's reports of a student's performance.",
-        place: "https://github.com/sarahT04/reports",
-        description: []
+        organization: "A simple CRUD website for teacher's reports of a student's inline skates performance.",
+        place: hrefify({
+            title: "Go to Github repository",
+            link: "https://github.com/sarahT04/reports",
+            child: "https://github.com/sarahT04/reports",
+        }),
+        description: [
+            "Was made to create printable reports of each of my students performance for my inline skates coaching job"
+        ],
+        skills: [
+            "React", "MongoDB", "ChakraUI"
+        ]
     },
 
     {
         date: "07/2022",
         title: "Random Quote Generator",
         organization: "A react app that has an API to call a random quote and generating it.",
-        place: "https://github.com/sarahT04/random-quote-generator",
-        description: []
+        place: hrefify({
+            title: "Go to Github repository",
+            link: "https://github.com/sarahT04/random-quote-generator",
+            child: "https://github.com/sarahT04/random-quote-generator",
+        }),
+        description: [],
+        skills: [
+            "React"
+        ]
     },
 
     {
         date: "09/2021",
         title: "Number Rain",
         organization: "It is just printing a bunch of numbers as if it's raining :) ",
-        place: "https://github.com/sarahT04/NumberRain",
-        description: []
+        place: hrefify({
+            title: "Go to Github repository",
+            link: "https://github.com/sarahT04/NumberRain",
+            child: "https://github.com/sarahT04/NumberRain",
+        }),
+        description: [],
+        skills: [
+            "Python"
+        ]
     },
 
 ];
@@ -199,7 +271,17 @@ export const organizations: Experience[] = [
         title: "Secretary",
         organization: "South Region of Indonesian Students' Association in China",
         place: "China · Remote",
-        description: []
+        description: [
+            "South Region of Indonesian Students' Association in China is a grouping of the association branches that geographically orientates itself towards the southern part of China. It consists of 12 branches.",
+            "Writes important documents, coordinate meetings inter-branches and make key decisions",
+            "Assists secretary works in all south region of China's branches",
+            "The Public Relations person for 2 (two) branches: Wuhan and Changsha"
+        ],
+        skills: [
+            "Secretary work",
+            "Documents writing",
+            "Public Relations"
+        ]
     },
 
     {
@@ -207,7 +289,24 @@ export const organizations: Experience[] = [
         title: "Head of People's Development Department",
         organization: "Wuhan Branch of Indonesian Students' Association in China",
         place: "Wuhan, Hubei, China",
-        description: []
+        description: [
+            "The People Development Department focuses on capacity building, well-being, and connectivity for Indonesian students in Wuhan.",
+            "Coordinates several work programmes in Wuhan with 5 committees members. Work programmes includes:",
+            "<span class='font-semibold'>[08/25] Freshmen Preparation Camp</span>: Coordinated a webinar for freshmen to prepare their pre-coming to Wuhan, becomes the primary contact person in WhatsApp group, and published a guidebook to be shared to the freshmen",
+            "<span class='font-semibold'>[09/25] Student Census</span>: Coordinated the census, made several videos and posters for call to action.",
+            "<span class='font-semibold'>[10/25] Welcoming Party</span>: Coordinated an outdoor event to welcome the freshmen. Event consists of: playing sports together to bond with each other",
+            "<span class='font-semibold'>[11/25] Explore Huangshi - Hiking & Bonding</span>: Coordinated a hiking event to another city.",
+            "<span class='font-semibold'>[10-12/25] Culture Festival</span>: Assisted coordination in 8 different universities holding culture festivals.",
+            "<span class='font-semibold'>[12/25] Christmas Party</span>: Bonding lunch to celebrate Christmas and New Years.",
+            "<span class='font-semibold'>[02/26] Mandarin Camp</span>: Partnered with an online mandarin camp to create 5 days of learning Mandarin camp."
+        ],
+        skills: [
+            "Leadership",
+            "Teamwork",
+            "HR",
+            "Event Coordination",
+            "Partnership"
+        ]
     },
 
     {
@@ -215,7 +314,14 @@ export const organizations: Experience[] = [
         title: "Secretary 2",
         organization: "Basic Leadership Skills Training 2026, <br />South Region of Indonesian Students' Association in China",
         place: "Xiamen, Fujian, China",
-        description: []
+        description: [
+            "Basic Leadership Skills Traning 2026 aims to produce Gen Z leaders who are not only intelligent and competent, but also mentally strong, resilient in facing challenges, and able to bring positive change to their respective environments.",
+            "Writes key documents such as proposal, partnership letters, and sponsorship letters"
+        ],
+        skills: [
+            "Secretary work",
+            "Documents writing",
+        ]
     },
 
     {
@@ -223,7 +329,16 @@ export const organizations: Experience[] = [
         title: "Tech Division Committee",
         organization: "Asian Scholars International Conference",
         place: "Nanjing, Jiangsu, China",
-        description: []
+        description: [
+            "Asian Scholars’ International Conference (ASIC), hosted for the first time by Perluni Tiongkok in collaboration with PPI Tiongkok and PPIT Nanjing, is a flagship international forum designed to strengthen research partnerships and innovation across the Asia-Pacific.",
+            "Helped to develop and manage the official conference website, handled online registration system and database (forms, QR code)",
+            "Became the moderator for one of their forum titled: 'AI Optimization in Scientific Research and Publication"
+        ],
+        skills: [
+            "Public Speaking",
+            "Teamwork",
+            "General IT Skills"
+        ]
     },
 
     {
@@ -232,8 +347,13 @@ export const organizations: Experience[] = [
         organization: "The Organizer's Class: ",
         place: "China · Remote",
         description: [
-            "Coordinated the event's ideation, guest talk, and",
-            // "Planning script etc"
+            "Organizer's Class is a webinar featuring six speakers from various cities. This webinar is aimed to equip participants with professional competencies in event management. This activity combines theoretical material with practical experience sharing to ensure participants are able to execute their organization's work programs systematically and impactfully.",
+            "Helped with the event's ideation, invited the speakers, and coordinated the MC & Moderator",
+        ],
+        skills: [
+            "Event Coordinating",
+            "Public Relations",
+            "Webinar Coordination"
         ]
     },
 
@@ -242,21 +362,47 @@ export const organizations: Experience[] = [
         title: "Event Coordinator",
         organization: "Basic Leadership Skills Training 2025, <br />South Region of Indonesian Students' Association in China",
         place: "Wuhan, Hubei, China",
-        description: []
+        description: [
+            "Basic Leadership Skills Traning 2026 aims to produce Gen Z leaders who are not only intelligent and competent, but also mentally strong, resilient in facing challenges, and able to bring positive change to their respective environments.",
+            "Managed and led all aspects of event execution, ensuring successful outcomes and efficient cross-divisional task distribution. Responsibilities included concept development, content planning, title creation, and strategic goal alignment for all stakeholders.",
+            "Served as the primary Point of Contact, effectively managing internal and external communication"
+
+        ],
+        skills: [
+            "Event Coordinating & Ideation",
+            "Public Relations",
+            "Partnership",
+            "Procurement"
+        ]
     },
     {
         date: "09/2024 - 05/2025",
         title: "Social Media Officer",
         organization: "South Region of Indonesian Students' Association in China",
         place: "China · Remote",
-        description: []
+        description: [
+            "Main designer and manager of the Instagram account",
+            "Made all of the designs including Virtual Background, Story Template, and Instagram Post / Reels needs."
+        ],
+        skills: [
+            "Social Media Managing",
+            "Content Creating",
+            "Graphic Designing",
+        ]
     },
     {
         date: "07/2024 - 05/2025",
         title: "Media and Publication Committee",
         organization: "Wuhan Branch of Indonesian Students' Association in China",
         place: "Wuhan, Hubei, China",
-        description: []
+        description: [
+            "Created video recaps with Instagram Reels format for multiple work programme",
+            "Prepared initial ideation of the organization's Instagram account concepts"
+        ],
+        skills: [
+            "Content Creating",
+            "Video Making",
+        ]
     },
 
 ];
@@ -269,7 +415,18 @@ export const certificates: Experience[] = [
         place: "Wuhan, Hubei, China",
         description: [
             "As an international student ambassador, representing my country, I was tasked to create video, graphic design, and copywriting content for the university's WeChat account",
-            "Main Social Media Manager for the university's Instagram account (@studyatcug)"
+            `Main Social Media Manager for the university's Instagram account
+            ${hrefify({
+                title: "See the account",
+                child: "(@studyatcug)",
+                link: "https://www.instagram.com/studyatcug"
+            })}
+            `
+        ],
+        skills: [
+            "Social Media Manager",
+            "Content Creating",
+            "Global Community"
         ]
     },
 
@@ -279,8 +436,12 @@ export const certificates: Experience[] = [
         organization: "China University of Geosciences",
         place: "Wuhan, Hubei, China",
         description: [
-            "Organized a culture festival day with 32 countries participating and attracted thousands of comers",
-            "Made the ideation of the festival, helped with the execution by being a liaison officer to help communication between the Chinese organizations and the International students."
+            "Organized a culture festival day with 32 countries participating and attracted thousands of people",
+            "Made the ideation of the festival, helped with the execution by being a liaison officer to help communication between the Chinese organizations and the International students.",
+        ],
+        skills: [
+            "Event Coordination",
+            "Global Community"
         ]
     },
 
@@ -290,7 +451,18 @@ export const certificates: Experience[] = [
         organization: "META - Coursera",
         place: "Online",
         description: [
-            "Skills acquired: Responsive Web Design, React.js, Figma"
+            "Completed 3 Full Stack projects (React) and 6 classes with Coursera peer-reviewed.",
+            `Certificate: 
+            ${hrefify({
+                title: "See the certificate",
+                child: "https://www.coursera.org/account/accomplishments/certificate/TXU2LBRUESMA",
+                link: "https://www.coursera.org/account/accomplishments/certificate/TXU2LBRUESMA",
+                className: "hover:ml-2"
+            })}
+            `,
+        ],
+        skills: [
+            "Responsive Web Design", "React.js", "Figma"
         ]
     },
 
@@ -300,7 +472,18 @@ export const certificates: Experience[] = [
         organization: "Harvard CS50",
         place: "Online",
         description: [
-            "Skills acquired: Web Programming, Django, Javascript"
+            "Completed 6 Full Stack projects (Django + Javascript) with Harvard peer-reviewed.",
+            `Certificate: 
+            ${hrefify({
+                title: "See the certificate",
+                child: "https://cs50.harvard.edu/certificates/de7180a5-278f-486d-a49e-485f0bfe0776",
+                link: "https://cs50.harvard.edu/certificates/de7180a5-278f-486d-a49e-485f0bfe0776",
+                className: "hover:ml-2"
+            })}
+            `
+        ],
+        skills: [
+            "Web Programming", "Django", "Javascript"
         ]
     },
 
@@ -311,6 +494,10 @@ export const certificates: Experience[] = [
         place: "Online Camp",
         description: [
             "Won the highest title with a group of 5 with a project pitch: 'Speed Bumper as Electricity Generator'"
+        ],
+        skills: [
+            "Creative Thinking",
+            "Global Community"
         ]
     },
 ]; 

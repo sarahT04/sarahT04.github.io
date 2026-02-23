@@ -1,14 +1,15 @@
 <script lang="ts">
-	import Sarah from '$lib/images/sarah pfp.jpg';
+	import Sarah from '$lib/images/2 sarah pfp.jpg';
 	import Github from '$lib/svg/Github.svelte';
 	import Linkedin from '$lib/svg/Linkedin.svelte';
 	import ExperiencesCard from '$components/ExperiencesCard.svelte';
+	import { fade } from 'svelte/transition';
 
 	import { experiences, projects, organizations, certificates } from '../data';
 
 	const labels = ['experiences', 'projects', 'organizations', 'certificates'] as const;
 	const data = { experiences, projects, organizations, certificates };
-	let currentNav: keyof typeof data = labels[0];
+	let currentNav: keyof typeof data = labels[2];
 
 	function capitalize(str: string) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
@@ -29,11 +30,11 @@
 				</h1>
 				<h3 class="mt-2 mb-3 text-center italic">A polygot, globalized and carefree thinking addict</h3>
 				<div class="flex items-center text-center gap-3 mt-auto mb-5">
-					<a href="https://github.com/sarahT04" title="sarahT04 on Github" class="text-main-orange"
+					<a href="https://github.com/sarahT04" title="sarahT04 on Github" class="on-hover-animation"
 						><Github /></a
 					>
 					<a
-						class="text-main-orange"
+						class="on-hover-animation"
 						href="https://www.linkedin.com/in/sarah-tanujaya-b9495a1b4/"
 						title="Sarah Tanujaya on Linkedin"
 					>
@@ -49,7 +50,7 @@
 				description={[
 					'Chinese Government Scholarship Awardee',
 					'Classes conducted in Chinese (Simplified)',
-					'See all of my <a href="#" class="underline hover:text-main-orange">classwork projects</a>'
+					'See all of my <a href="#" class="underline on-hover-animation hover:ml-1">classwork projects</a>'
 				]}
 			/>
 			<ExperiencesCard
@@ -69,15 +70,15 @@
 		<section class="section glassmorphism w-full lg:w-3/4">
 			<p class="text-main-orange font-semibold">About me</p>
 			<h1 class="text-sm lg:text-base">
-				Sarah Tan is an Indonesian nationality that is currently living in Wuhan, China. <br />I am
+				My name is Sarah Tan. I hold an Indonesian passport and Chinese Student Visa. <br />I am
 				a polygot, globalized and multi-disciplinary person. I work with a lot of stuff that ranges
 				from humanities to technology. Discuss with me about multiple topics!
 				<br /><br />
-				I speak 3 languages: Indonesian (Fluent), English (C1), Chinese Simplified (HSK4)
+				I speak 3 languages: Indonesian (Native), English (C1), Chinese Simplified (HSK4)
 				<br /><br />
-				Currently an international student in Wuhan, China and a Software Engineer in Beneran Indonesia
-				(NGO) whose focus is in building their LMS website and their application that does gamification
-				for ethics education.
+				Currently an international student in Wuhan, China, a student committee in Indonesian Students' Association in China,
+				and a Software Engineer in Beneran Indonesia (NGO) whose focus is in building their LMS website and their application 
+				that does gamification for ethics education.
 			</h1>
 		</section>
 
@@ -86,7 +87,7 @@
 				{#each labels as label}
 					<button
 						type="button"
-						class={`cursor-pointer transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.03] hover:text-main-orange text-sm lg:text-base ${
+						class={`on-hover-animation text-sm lg:text-base ${
 							currentNav === label ? 'text-main-orange' : ''
 						}`}
 						on:click={() => (currentNav = label)}
@@ -98,9 +99,13 @@
 		</nav>
 
 		<section class="section glassmorphism w-full lg:w-3/4">
-			{#each data[currentNav] as experience}
-				<ExperiencesCard {...experience} />
-			{/each}
+			{#key currentNav}
+				<div transition:fade={{ duration: 200 }}>
+					{#each data[currentNav] as experience}
+						<ExperiencesCard {...experience} />
+					{/each}
+				</div>
+			{/key}
 		</section>
 	</main>
 </div>

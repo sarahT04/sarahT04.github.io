@@ -28,8 +28,9 @@
 			</ul>
 		{/if}
 		{#if skills?.length}
-			<p class="text-xs lg:text-sm">
-				<span class="font-semibold">Skills:</span> {skills.join(', ')}
+			<p class={`${!description?.length ? 'mt-2' : ''} text-xs lg:text-sm`}>
+				<span class="font-semibold">Skills:</span>
+				{skills.join(', ')}
 			</p>
 		{/if}
 	</div>
