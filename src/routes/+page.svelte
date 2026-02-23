@@ -9,7 +9,7 @@
 
 	const labels = ['experiences', 'projects', 'organizations', 'certificates'] as const;
 	const data = { experiences, projects, organizations, certificates };
-	let currentNav: keyof typeof data = labels[2];
+	let currentNav: keyof typeof data = labels[0];
 
 	function capitalize(str: string) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
