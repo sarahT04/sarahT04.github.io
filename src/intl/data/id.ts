@@ -1,5 +1,5 @@
 import type { DataBundle, Experience } from './types';
-import { hrefify } from '$lib/utils/hrefify';
+import { hrefify, hrefifyProjects } from '$lib/utils/hrefify';
 
 export const sidebarExperiences: Experience[] = [
 	{
@@ -138,10 +138,17 @@ export const projects: Experience[] = [
 		date: '02/2026',
 		title: "Sarah's Snaps",
 		organization: 'Portofolio fotografi saya',
-		place: hrefify({
-			title: "Go to Sarah's Snaps",
-			link: 'https://sarahs-snaps.vercel.app/',
-			child: 'https://sarahs-snaps.vercel.app/'
+		place: hrefifyProjects({
+			website: {
+				title: "Lihat website Sarah's Snaps",
+				link: 'https://sarahs-snaps.vercel.app/',
+				child: 'https://sarahs-snaps.vercel.app/'
+			},
+			github: {
+				title: "Lihat Github Sarah's Snaps",
+				link: 'https://github.com/sarahT04/sarahs-snaps',
+				child: 'https://github.com/sarahT04/sarahs-snaps'
+			}
 		}),
 		description: ['Kumpulan foto dari berbagai negara. Semua diambil dengan Xiaomi 14 Ultra'],
 		skills: ['Astro', 'MDX', 'ImageKit', 'Photography']
@@ -150,10 +157,12 @@ export const projects: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Classworks',
 		organization: 'Kumpulan tugas dan catatan kelas yang menurut saya menarik',
-		place: hrefify({
-			title: 'Go to see my classworks',
-			link: 'https://sarahs-classwork.vercel.app/',
-			child: 'https://sarahs-classwork.vercel.app/'
+		place: hrefifyProjects({
+			website: {
+				title: 'Lihat classworks saya',
+				link: 'https://sarahs-classwork.vercel.app/',
+				child: 'https://sarahs-classwork.vercel.app/'
+			}
 		}),
 		description: ['Sebagian besar proyek menggunakan C++ dan Python'],
 		skills: ['C++', 'Python', 'Notetaking']
@@ -162,10 +171,12 @@ export const projects: Experience[] = [
 		date: '',
 		title: 'Advent of Code',
 		organization: 'Solusi Advent of Code menggunakan Python',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/advent-of-code',
-			child: 'https://github.com/sarahT04/advent-of-code'
+		place: hrefifyProjects({
+			github: {
+				title: 'Lihat repositori Github',
+				link: 'https://github.com/sarahT04/advent-of-code',
+				child: 'https://github.com/sarahT04/advent-of-code'
+			}
 		}),
 		description: ['Saat ini tersedia: Tahun 2015'],
 		skills: ['Python', 'Puzzle Solving']
@@ -175,10 +186,17 @@ export const projects: Experience[] = [
 		date: '04/2023',
 		title: 'META Front-End Capstone',
 		organization: 'Proyek akhir untuk Sertifikasi Front-End Developer META',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/meta-capstone',
-			child: 'https://github.com/sarahT04/meta-capstone'
+		place: hrefifyProjects({
+			website: {
+				title: 'Lihat website',
+				link: 'https://little-lemon-saraht04.vercel.app/',
+				child: 'https://little-lemon-saraht04.vercel.app/'
+			},
+			github: {
+				title: 'Lihat repositori Github',
+				link: 'https://github.com/sarahT04/meta-capstone',
+				child: 'https://github.com/sarahT04/meta-capstone'
+			}
 		}),
 		description: [
 			'Little Lemon adalah restoran fiktif yang mengintegrasikan bisnisnya ke platform online.',
@@ -191,10 +209,17 @@ export const projects: Experience[] = [
 		date: '03/2023',
 		title: 'Reports',
 		organization: 'Website CRUD sederhana untuk laporan performa siswa inline skates',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/reports',
-			child: 'https://github.com/sarahT04/reports'
+		place: hrefifyProjects({
+			website: {
+				title: 'Lihat website',
+				link: 'https://reports-saraht04.vercel.app/',
+				child: 'https://reports-saraht04.vercel.app/'
+			},
+			github: {
+				title: 'Lihat repositori Github',
+				link: 'https://github.com/sarahT04/reports',
+				child: 'https://github.com/sarahT04/reports'
+			}
 		}),
 		description: ['Dibuat untuk mencetak laporan performa setiap siswa latihan inline skates'],
 		skills: ['React', 'MongoDB', 'ChakraUI']
@@ -204,10 +229,12 @@ export const projects: Experience[] = [
 		date: '07/2022',
 		title: 'Random Quote Generator',
 		organization: 'Aplikasi React yang memanggil API untuk menampilkan quote acak.',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/random-quote-generator',
-			child: 'https://github.com/sarahT04/random-quote-generator'
+		place: hrefifyProjects({
+			github: {
+				title: 'Lihat repositori Github',
+				link: 'https://github.com/sarahT04/random-quote-generator',
+				child: 'https://github.com/sarahT04/random-quote-generator'
+			}
 		}),
 		description: [],
 		skills: ['React']
@@ -217,10 +244,12 @@ export const projects: Experience[] = [
 		date: '09/2021',
 		title: 'Number Rain',
 		organization: 'Mencetak angka-angka seperti sedang hujan :)',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/NumberRain',
-			child: 'https://github.com/sarahT04/NumberRain'
+		place: hrefifyProjects({
+			github: {
+				title: 'Lihat repositori Github',
+				link: 'https://github.com/sarahT04/NumberRain',
+				child: 'https://github.com/sarahT04/NumberRain'
+			}
 		}),
 		description: [],
 		skills: ['Python']

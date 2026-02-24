@@ -1,5 +1,5 @@
 import type { DataBundle, Experience } from './types';
-import { hrefify } from '$lib/utils/hrefify';
+import { hrefify, hrefifyProjects } from '$lib/utils/hrefify';
 
 export const sidebarExperiences: Experience[] = [
 	{
@@ -144,11 +144,18 @@ export const projects: Experience[] = [
 		date: '02/2026',
 		title: "Sarah's Snaps",
 		organization: 'My photography portofolio',
-		place: hrefify({
-			title: "Go to Sarah's Snaps",
-			link: 'https://sarahs-snaps.vercel.app/',
-			child: 'https://sarahs-snaps.vercel.app/'
-		}),
+		place: hrefifyProjects({
+            website: {
+                title: "Go to Sarah's Snaps Website",
+                link: 'https://sarahs-snaps.vercel.app/',
+                child: 'https://sarahs-snaps.vercel.app/'
+            },
+            github: {
+                title: "Go to Sarah's Snaps Github",
+                link: 'https://github.com/sarahT04/sarahs-snaps',
+                child: 'https://github.com/sarahT04/sarahs-snaps'
+            }
+        }),
 		description: ['See how I see different countries. All shot from Xiaomi 14 Ultra'],
 		skills: ['Astro', 'MDX', 'ImageKit', 'Photography']
 	},
@@ -156,11 +163,18 @@ export const projects: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Classworks',
 		organization: 'My homework and notes from university classes and projects that I find interesting',
-		place: hrefify({
-			title: 'Go to see my classworks',
+        place: hrefifyProjects({
+            website: {
+                title: 'Go to see my classworks',
 			link: 'https://sarahs-classwork.vercel.app/',
 			child: 'https://sarahs-classwork.vercel.app/'
-		}),
+            },
+            // github: {
+            //     title: "Go to see the Github repo",
+            //     link: '',
+            //     child: ''
+            // }
+        }),
 		description: ['My classworks. Mostly accomplishing projects using C++ and Python'],
 		skills: ['C++', 'Python', 'Notetaking']
 	},
@@ -168,11 +182,13 @@ export const projects: Experience[] = [
 		date: '',
 		title: 'Advent of Code',
 		organization: 'Solutions for Advent of Code using Python',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/advent-of-code',
-			child: 'https://github.com/sarahT04/advent-of-code'
-		}),
+		place: hrefifyProjects({
+            github: {
+                title: 'Go to Github repository',
+                link: 'https://github.com/sarahT04/advent-of-code',
+                child: 'https://github.com/sarahT04/advent-of-code'
+            }
+        }),
 		description: ['Currently available: Year 2015'],
 		skills: ['Python', 'Puzzle Solving']
 	},
@@ -181,11 +197,18 @@ export const projects: Experience[] = [
 		date: '04/2023',
 		title: 'META Front-End Capstone',
 		organization: "Front-End Capstone project for META's Front-End Developer Certification",
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/meta-capstone',
-			child: 'https://github.com/sarahT04/meta-capstone'
-		}),
+		place: hrefifyProjects({
+            website: {
+                title: 'Go to see the website',
+                link: 'https://little-lemon-saraht04.vercel.app/',
+                child: 'https://little-lemon-saraht04.vercel.app/'
+            },
+            github: {
+                title: 'Go to Github repository',
+                link: 'https://github.com/sarahT04/meta-capstone',
+                child: 'https://github.com/sarahT04/meta-capstone'
+            }
+        }),
 		description: [
 			'Little Lemon is a fictional restaraurant that integrates their business into the online platform.',
 			"A mockup website of restaurant's background and table reservation"
@@ -197,11 +220,18 @@ export const projects: Experience[] = [
 		date: '03/2023',
 		title: 'Reports',
 		organization: "A simple CRUD website for teacher's reports of a student's inline skates performance.",
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/reports',
-			child: 'https://github.com/sarahT04/reports'
-		}),
+		place: hrefifyProjects({
+            website: {
+                title: 'Go to see the website',
+                link: 'https://reports-saraht04.vercel.app/',
+                child: 'https://reports-saraht04.vercel.app/'
+            },
+            github: {
+                title: 'Go to Github repository',
+                link: 'https://github.com/sarahT04/reports',
+                child: 'https://github.com/sarahT04/reports'
+            }
+        }),
 		description: [
 			"Was made to create printable reports of each of my students performance for my inline skates coaching job"
 		],
@@ -212,11 +242,13 @@ export const projects: Experience[] = [
 		date: '07/2022',
 		title: 'Random Quote Generator',
 		organization: 'A react app that has an API to call a random quote and generating it.',
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/random-quote-generator',
-			child: 'https://github.com/sarahT04/random-quote-generator'
-		}),
+		place: hrefifyProjects({
+            github: {
+                title: 'Go to Github repository',
+                link: 'https://github.com/sarahT04/random-quote-generator',
+                child: 'https://github.com/sarahT04/random-quote-generator'
+            }
+        }),
 		description: [],
 		skills: ['React']
 	},
@@ -225,11 +257,13 @@ export const projects: Experience[] = [
 		date: '09/2021',
 		title: 'Number Rain',
 		organization: "It is just printing a bunch of numbers as if it's raining :) ",
-		place: hrefify({
-			title: 'Go to Github repository',
-			link: 'https://github.com/sarahT04/NumberRain',
-			child: 'https://github.com/sarahT04/NumberRain'
-		}),
+		place: hrefifyProjects({
+            github: {
+                title: 'Go to Github repository',
+                link: 'https://github.com/sarahT04/NumberRain',
+                child: 'https://github.com/sarahT04/NumberRain'
+            }
+        }),
 		description: [],
 		skills: ['Python']
 	}

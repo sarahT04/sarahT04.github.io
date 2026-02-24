@@ -1,5 +1,5 @@
 import type { DataBundle, Experience } from './types';
-import { hrefify } from '$lib/utils/hrefify';
+import { hrefify, hrefifyProjects } from '$lib/utils/hrefify';
 
 export const sidebarExperiences: Experience[] = [
 	{
@@ -138,10 +138,17 @@ export const projects: Experience[] = [
 		date: '2026/02',
 		title: 'Sarah\'s Snaps',
 		organization: '我的摄影作品集',
-		place: hrefify({
-			title: '前往 Sarah\'s Snaps',
-			link: 'https://sarahs-snaps.vercel.app/',
-			child: 'https://sarahs-snaps.vercel.app/'
+		place: hrefifyProjects({
+			website: {
+				title: '前往 Sarah\'s Snaps 网站',
+				link: 'https://sarahs-snaps.vercel.app/',
+				child: 'https://sarahs-snaps.vercel.app/'
+			},
+			github: {
+				title: '前往 Sarah\'s Snaps Github',
+				link: 'https://github.com/sarahT04/sarahs-snaps',
+				child: 'https://github.com/sarahT04/sarahs-snaps'
+			}
 		}),
 		description: ['用小米 14 Ultra 记录我看过的不同国家'],
 		skills: ['Astro', 'MDX', 'ImageKit', '摄影']
@@ -150,10 +157,12 @@ export const projects: Experience[] = [
 		date: '2023/09 - 至今',
 		title: '课业作品',
 		organization: '我感兴趣的课程作业与项目笔记',
-		place: hrefify({
-			title: '查看课业作品',
-			link: 'https://sarahs-classwork.vercel.app/',
-			child: 'https://sarahs-classwork.vercel.app/'
+		place: hrefifyProjects({
+			website: {
+				title: '查看课业作品',
+				link: 'https://sarahs-classwork.vercel.app/',
+				child: 'https://sarahs-classwork.vercel.app/'
+			}
 		}),
 		description: ['主要用 C++ 和 Python 完成项目'],
 		skills: ['C++', 'Python', '学习笔记']
@@ -162,10 +171,12 @@ export const projects: Experience[] = [
 		date: '',
 		title: 'Advent of Code',
 		organization: 'Advent of Code（Python 解题）',
-		place: hrefify({
-			title: '前往 Github 仓库',
-			link: 'https://github.com/sarahT04/advent-of-code',
-			child: 'https://github.com/sarahT04/advent-of-code'
+		place: hrefifyProjects({
+			github: {
+				title: '前往 Github 仓库',
+				link: 'https://github.com/sarahT04/advent-of-code',
+				child: 'https://github.com/sarahT04/advent-of-code'
+			}
 		}),
 		description: ['目前整理了 2015 年'],
 		skills: ['Python', '解谜能力']
@@ -175,10 +186,17 @@ export const projects: Experience[] = [
 		date: '2023/04',
 		title: 'META 前端结业项目',
 		organization: 'META 前端开发认证结业项目',
-		place: hrefify({
-			title: '前往 Github 仓库',
-			link: 'https://github.com/sarahT04/meta-capstone',
-			child: 'https://github.com/sarahT04/meta-capstone'
+		place: hrefifyProjects({
+			website: {
+				title: '查看网站',
+				link: 'https://little-lemon-saraht04.vercel.app/',
+				child: 'https://little-lemon-saraht04.vercel.app/'
+			},
+			github: {
+				title: '前往 Github 仓库',
+				link: 'https://github.com/sarahT04/meta-capstone',
+				child: 'https://github.com/sarahT04/meta-capstone'
+			}
 		}),
 		description: [
 			'Little Lemon 是一个把业务搬到线上平台的虚构餐厅',
@@ -191,10 +209,17 @@ export const projects: Experience[] = [
 		date: '2023/03',
 		title: 'Reports',
 		organization: '用于记录学生轮滑表现的 CRUD 网站',
-		place: hrefify({
-			title: '前往 Github 仓库',
-			link: 'https://github.com/sarahT04/reports',
-			child: 'https://github.com/sarahT04/reports'
+		place: hrefifyProjects({
+			website: {
+				title: '查看网站',
+				link: 'https://reports-saraht04.vercel.app/',
+				child: 'https://reports-saraht04.vercel.app/'
+			},
+			github: {
+				title: '前往 Github 仓库',
+				link: 'https://github.com/sarahT04/reports',
+				child: 'https://github.com/sarahT04/reports'
+			}
 		}),
 		description: ['用于生成学生轮滑训练表现的可打印报告'],
 		skills: ['React', 'MongoDB', 'ChakraUI']
@@ -204,10 +229,12 @@ export const projects: Experience[] = [
 		date: '2022/07',
 		title: '随机名言生成器',
 		organization: '调用 API 获取并展示随机名言的 React 应用',
-		place: hrefify({
-			title: '前往 Github 仓库',
-			link: 'https://github.com/sarahT04/random-quote-generator',
-			child: 'https://github.com/sarahT04/random-quote-generator'
+		place: hrefifyProjects({
+			github: {
+				title: '前往 Github 仓库',
+				link: 'https://github.com/sarahT04/random-quote-generator',
+				child: 'https://github.com/sarahT04/random-quote-generator'
+			}
 		}),
 		description: [],
 		skills: ['React']
@@ -217,10 +244,12 @@ export const projects: Experience[] = [
 		date: '2021/09',
 		title: 'Number Rain',
 		organization: '模拟数字下雨效果的小程序 :)',
-		place: hrefify({
-			title: '前往 Github 仓库',
-			link: 'https://github.com/sarahT04/NumberRain',
-			child: 'https://github.com/sarahT04/NumberRain'
+		place: hrefifyProjects({
+			github: {
+				title: '前往 Github 仓库',
+				link: 'https://github.com/sarahT04/NumberRain',
+				child: 'https://github.com/sarahT04/NumberRain'
+			}
 		}),
 		description: [],
 		skills: ['Python']
