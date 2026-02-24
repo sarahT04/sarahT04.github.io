@@ -130,6 +130,16 @@ export const experiences: Experience[] = [
 			'在一家 UMKM 公司完成 3 个月实习，用 Joomla 4.0 从零搭建网站，满足业务需求'
 		],
 		skills: ['沟通与团队合作', '商业管理']
+	},
+	{
+		date: '2019/07 - 2023/09',
+		title: '轮滑教练',
+		organization: 'Rollerskool · PT. Autory Muda Indonesia',
+		place: '印度尼西亚 雅加达',
+		description: [
+			'按轮滑课程体系，在公共场地、体育馆和国际学校指导不同年龄段的学员，累计带教数百人'
+		],
+		skills: ['沟通与团队合作', '全球社群', '轮滑', '教学辅导']
 	}
 ];
 

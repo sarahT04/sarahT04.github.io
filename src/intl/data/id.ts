@@ -130,6 +130,16 @@ export const experiences: Experience[] = [
 			"Internship 3 bulan di perusahaan UMKM. Menggunakan Joomla 4.0, saya membuat website dari nol untuk memenuhi kebutuhan perusahaan."
 		],
 		skills: ['Communication and Teamwork', 'Business Management']
+	},
+	{
+		date: '07/2019 - 09/2023',
+		title: 'Inline Skates Coach',
+		organization: 'Rollerskool · PT. Autory Muda Indonesia',
+		place: 'Jakarta, Indonesia',
+		description: [
+			'Melatih ratusan anak dan dewasa dari berbagai usia di ruang publik, gedung olahraga, dan sekolah internasional sesuai kurikulum inline skating'
+		],
+		skills: ['Communication and Teamwork', 'Global Community', 'Inline Skates', 'Coaching']
 	}
 ];
 
