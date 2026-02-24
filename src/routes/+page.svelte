@@ -11,8 +11,8 @@
 	const labels = ['experiences', 'projects', 'organizations', 'certificates'] as const;
 	type SectionKey = (typeof labels)[number];
 	let currentNav: SectionKey = labels[0];
+	
 	$: data = dataByLocale[$locale];
-
 	$: isChinese = $locale === 'cn';
 </script>
 
@@ -21,7 +21,7 @@
 		<section class="flex flex-col gap-2 rounded-2xl">
 			<img
 				src={Sarah}
-				alt="A back shot of Sarah looking at faraway"
+				alt="A picture of Sarah smiling at the camera"
 				class="w-36 lg:w-48 rounded-xl self-center"
 			/>
 			<div class="mt-4 flex flex-col items-center justify-center">
