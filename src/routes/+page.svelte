@@ -4,16 +4,16 @@
 	import Linkedin from '$lib/svg/Linkedin.svelte';
 	import ExperiencesCard from '$components/ExperiencesCard.svelte';
 	import { fade } from 'svelte/transition';
+	import { locale, setLocale, t } from '$lib/i18n';
 
-	import { experiences, projects, organizations, certificates } from '../data';
+	import { dataByLocale } from '../data';
 
 	const labels = ['experiences', 'projects', 'organizations', 'certificates'] as const;
-	const data = { experiences, projects, organizations, certificates };
-	let currentNav: keyof typeof data = labels[0];
+	type SectionKey = (typeof labels)[number];
+	let currentNav: SectionKey = labels[0];
+	$: data = dataByLocale[$locale];
 
-	function capitalize(str: string) {
-		return str.charAt(0).toUpperCase() + str.slice(1);
-	}
+	$: isChinese = $locale === 'cn';
 </script>
 
 <div class="flex flex-col lg:flex-row overflow-hidden">
@@ -28,7 +28,30 @@
 				<h1 class="text-3xl lg:text-4xl text-center">
 					Hi! I'm <span class="text-main-orange font-semibold">Sarah Tan</span> :)
 				</h1>
-				<h3 class="mt-2 mb-3 text-center italic">A polygot, globalized and carefree thinking addict</h3>
+				<h3 class="mt-2 mb-2 text-center italic">{$t('header.tagline')}</h3>
+				<div class="flex items-center gap-2 mb-3">
+					<button
+						type="button"
+						class={`on-hover-animation text-xs lg:text-sm ${$locale === 'en' ? 'text-main-orange' : ''}`}
+						on:click={() => setLocale('en')}
+					>
+						{isChinese ? '英' : 'EN'}
+					</button>
+					<button
+						type="button"
+						class={`on-hover-animation text-xs lg:text-sm ${$locale === 'cn' ? 'text-main-orange' : ''}`}
+						on:click={() => setLocale('cn')}
+					>
+						{isChinese ? '中' : 'CN'}
+					</button>
+					<button
+						type="button"
+						class={`on-hover-animation text-xs lg:text-sm ${$locale === 'id' ? 'text-main-orange' : ''}`}
+						on:click={() => setLocale('id')}
+					>
+						{isChinese ? '印' : 'ID'}
+					</button>
+				</div>
 				<div class="flex items-center text-center gap-3 mt-auto mb-5">
 					<a href="https://github.com/sarahT04" title="sarahT04 on Github" class="on-hover-animation"
 						><Github /></a
@@ -42,43 +65,17 @@
 					</a>
 				</div>
 			</div>
-			<ExperiencesCard
-				date="09/2023 - 06/2027"
-				title="Bachelor of Computer Science"
-				organization="China University of Geosciences"
-				place="Wuhan, Hubei, China"
-				description={[
-					'Chinese Government Scholarship Awardee',
-					'Classes conducted in Chinese (Simplified)',
-					'See all of my <a href="#" class="underline on-hover-animation hover:ml-1">classwork projects</a>'
-				]}
-			/>
-			<ExperiencesCard
-				date="09/2023 - Present"
-				title="Software Engineer"
-				organization="Beneran Indonesia (NGO)"
-				place="Jakarta, Indonesia, Online"
-				description={[
-					'Full Stack Developer for their LMS Website<br />pusakawan.id and their back-office<br />website for the LMS',
-					'Current maintainer of their Android<br />application: Pusakawan'
-				]}
-			/>
+			{#each data.sidebarExperiences as experience}
+				<ExperiencesCard {...experience} />
+			{/each}
 		</section>
 	</header>
 
 	<main class="parent-class items-center flex-col mt-5 w-full lg:w-2/3 px-6 lg:px-0">
 		<section class="section glassmorphism w-full lg:w-3/4">
-			<p class="text-main-orange font-semibold">About me</p>
+			<p class="text-main-orange font-semibold">{$t('about.title')}</p>
 			<h1 class="text-sm lg:text-base">
-				My name is Sarah Tan. I hold an Indonesian passport and Chinese Student Visa. <br />I am
-				a polygot, globalized and multi-disciplinary person. I work with a lot of stuff that ranges
-				from humanities to technology. Discuss with me about multiple topics!
-				<br /><br />
-				I speak 3 languages: Indonesian (Native), English (C1), Chinese Simplified (HSK4)
-				<br /><br />
-				Currently an international student in Wuhan, China, a student committee in Indonesian Students' Association in China,
-				and a Software Engineer in Beneran Indonesia (NGO) whose focus is in building their LMS website and their application 
-				that does gamification for ethics education.
+				{@html $t('about.body')}
 			</h1>
 		</section>
 
@@ -92,7 +89,7 @@
 						}`}
 						on:click={() => (currentNav = label)}
 					>
-						{capitalize(label)}
+						{$t(`nav.${label}`)}
 					</button>
 				{/each}
 			</div>
