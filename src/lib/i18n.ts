@@ -35,7 +35,7 @@ const messages: Record<Locale, Record<string, string>> = {
 	}
 };
 
-export const locale = writable<Locale>('id');
+export const locale = writable<Locale>('en');
 
 export function setLocale(next: Locale) {
 	locale.set(next);
