@@ -37,5 +37,9 @@
 	});
 </script>
 
+<svelte:head>
+    <title>Sarah Tan · Portfolio Website</title>
+</svelte:head>
+
 <div bind:this={sky} id="sky-blinks" class="overflow-hidden"></div>
 <slot />
