@@ -29,9 +29,15 @@ export const experiences: Experience[] = [
 	{
 		date: '2023/09 - 至今',
 		title: '软件工程师',
-		organization: 'Beneran Indonesia（印尼非政府组织）',
+		organization: hrefify({
+				child: 'Beneran Indonesia（印尼非政府组织）',
+				link: 'https://beneranindonesia.id/',
+				title: '访问他们的网站！',
+				className: 'no-underline'
+			}),
 		place: '印度尼西亚 雅加达 · 远程',
 		description: [
+			"Beneran Indonesia 是一个专门从事性格发展和伦理/公民教育的非营利组织。我们通过游戏、冒险、互动课堂和志愿者活动提供相关的学习体验。",
 			`独立负责他们的学习管理系统（LMS）网站：
 			${hrefify({
 				child: 'pusakawan.id',
@@ -40,9 +46,9 @@ export const experiences: Experience[] = [
 				className: 'hover:mx-1'
 			})}
 			使用 Django、Next.js（TypeScript）、MaterialUI、PostgreSQL、AWS EB 和 S3。<br />
-			功能包括：登录认证、支付网关（Xendit）和 Articulate Storyline 嵌入`,
+			功能包括：登录认证、编辑用户资料、课程注册（付费或免费）、支付网关（Xendit）和 Articulate Storyline 嵌入`,
 			'负责 LMS 后台网站开发（React（TypeScript + Vite）、Refine.js 和 shadcn）',
-			'维护 Android 应用：Pusakawan（Flutter）',
+			'维护 Android 应用：Pusakawan，一款帮助教师和学生为真实项目玩游戏的应用，使用 Flutter 开发。',
 			'用 Python 和 JavaScript 写内部自动化脚本'
 		],
 		skills: [
@@ -64,7 +70,12 @@ export const experiences: Experience[] = [
 	{
 		date: '2025/05 - 2025/07',
 		title: '国际事务专员',
-		organization: 'HOPE International 厚溥国际',
+		organization: hrefify({
+				child: 'HOPE International 厚溥国际',
+				link: 'https://www.instagram.com/hopeinternational_id/',
+				title: '查看他们的 Instagram 账户！',
+				className: 'no-underline'
+			}),
 		place: '中国 湖北 武汉',
 		description: [
 			'在印尼语、中文、英语之间翻译关键商务文件（合同、提案、PPT 等），保证准确并保持专业语气。',
@@ -77,7 +88,12 @@ export const experiences: Experience[] = [
 	{
 		date: '2025/07 - 2025/08',
 		title: 'AI 讲师',
-		organization: 'Generation Girl Indonesia（印尼非政府组织）',
+		organization: hrefify({
+				child: 'Generation Girl Indonesia（印尼非政府组织）',
+				link: 'https://generationgirl.org/',
+				title: '访问他们的网站！',
+				className: 'no-underline'
+			}),
 		place: '印度尼西亚 · 远程',
 		description: [
 			'为不同年龄和背景的数百名印尼学员讲 AI，并与其他讲师一起设计每次 2 小时的课程。'
@@ -101,7 +117,12 @@ export const experiences: Experience[] = [
 	{
 		date: '2023/06 - 2023/07',
 		title: '编程社区导师',
-		organization: '斯坦福大学：Code In Place',
+		organization: hrefify({
+				child: '斯坦福大学：Code In Place',
+				link: 'https://codeinplace.stanford.edu/',
+				title: '访问他们的网站！',
+				className: 'no-underline'
+			}),
 		place: '全球 · 远程',
 		description: [
 			'6 周内为全球 10 名学习者讲授计算机科学基础',

@@ -29,9 +29,15 @@ export const experiences: Experience[] = [
 	{
 		date: '09/2023 - Present',
 		title: 'Software Engineer',
-		organization: 'Beneran Indonesia (NGO)',
+		organization: hrefify({
+				child: 'Beneran Indonesia (NGO)',
+				link: 'https://beneranindonesia.id/',
+				title: 'Check their website!',
+				className: 'no-underline'
+			}),
 		place: 'Jakarta, Indonesia · Remote',
 		description: [
+			"Beneran Indonesia is a non-profit organization specializing in character development and ethics/citizenship education. We deliver relevant and engaging learning experiences through games, adventures, interactive classes, and volunteer activities.",
 			`Sole full stack developer for their Learning Management System (LMS) Website: 
 			${hrefify({
 				child: 'pusakawan.id',
@@ -40,9 +46,9 @@ export const experiences: Experience[] = [
 				className: 'hover:mx-1'
 			})}
 			 with Django, Next.js (TypeScript), MaterialUI, PostgreSQL, AWS EB & S3. <br />
-			 Features: authentication, payment gateway (Xendit), and Articulate Storyline embed`,
+			 Features: authentication, user profile edit, enrollment to classes (paid or free), payment gateway (Xendit), and Articulate Storyline embed`,
 			'Current developer for their LMS back-office website with React (TypeScript + Vite), Refine.js & shadcn',
-			'Current maintainer of their Android application: Pusakawan, an app that xx using Flutter.',
+			'Current maintainer of their Android application: Pusakawan, an app that helps the teachers and students to play games for their in real life program purposes using Flutter.',
 			'Creates internal automation scripts for company purposes using Python and JavaScript.'
 		],
 		skills: [
@@ -64,7 +70,12 @@ export const experiences: Experience[] = [
 	{
 		date: '05/2025 - 07/2025',
 		title: 'International Relations Officer',
-		organization: 'HOPE International 厚溥国际',
+		organization: hrefify({
+				child: 'HOPE International 厚溥国际',
+				link: 'https://www.instagram.com/hopeinternational_id/',
+				title: 'Check their instagram account!',
+				className: 'no-underline'
+			}),
 		place: 'Wuhan, Hubei, China',
 		description: [
 			'Translated key business documents (e.g., contracts, proposals, ppt) from Indonesian to Chinese and English, and vice versa, ensuring accuracy and maintaining the original professional tone.',
@@ -83,7 +94,12 @@ export const experiences: Experience[] = [
 	{
 		date: '07/2025 - 08/2025',
 		title: 'AI Trainer',
-		organization: 'Generation Girl Indonesia (NGO)',
+		organization: hrefify({
+				child: 'Generation Girl Indonesia (NGO)',
+				link: 'https://generationgirl.org/',
+				title: 'Check their website!',
+				className: 'no-underline'
+			}),
 		place: 'Indonesia · Remote',
 		description: [
 			'Facilitated hundreds of Indonesian participants of all age and background about AI. Collaborated with other facilitator to create engaging classes of 2 hours duration each.'
@@ -107,7 +123,12 @@ export const experiences: Experience[] = [
 	{
 		date: '06/2023 - 07/2023',
 		title: 'Coding Community Mentor',
-		organization: 'Stanford University: Code In Place',
+		organization: hrefify({
+				child: 'Stanford University: Code In Place',
+				link: 'https://codeinplace.stanford.edu/',
+				title: 'Check their website!',
+				className: 'no-underline'
+			}),
 		place: 'Worldwide · Remote',
 		description: [
 			'Taught foundational Computer Science concepts to a global group of 10 learners over 6 weeks',
