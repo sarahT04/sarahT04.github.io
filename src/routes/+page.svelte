@@ -2,6 +2,8 @@
 	import Sarah from '$lib/images/2 sarah pfp.jpg';
 	import Github from '$lib/svg/Github.svelte';
 	import Linkedin from '$lib/svg/Linkedin.svelte';
+	import Medium from '$lib/svg/Medium.svelte';
+	
 	import ExperiencesCard from '$components/ExperiencesCard.svelte';
 	import { fade } from 'svelte/transition';
 	import { locale, setLocale, t } from '$lib/i18n';
@@ -19,6 +21,7 @@
 <div class="flex flex-col lg:flex-row overflow-hidden">
 <header class="parent-class pt-5 pb-2 lg:pb-36 px-6 lg:pl-16 w-full lg:w-1/3 justify-center">
 		<section class="flex flex-col gap-2 rounded-2xl">
+			<!-- svelte-ignore a11y-img-redundant-alt -->
 			<img
 				src={Sarah}
 				alt="A picture of Sarah smiling at the camera"
@@ -63,11 +66,20 @@
 					>
 						<Linkedin />
 					</a>
+					<a
+						class="on-hover-animation"
+						href="https://medium.com/@sarahT04"
+						title="Sarah Tanujaya on Medium"
+					>
+						<Medium />
+					</a>
 				</div>
 			</div>
+			<div class="mx-10">
 			{#each data.sidebarExperiences as experience}
 				<ExperiencesCard {...experience} />
 			{/each}
+			</div>
 		</section>
 	</header>
 

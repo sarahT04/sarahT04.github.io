@@ -17,12 +17,22 @@ export const sidebarExperiences: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Software Engineer',
 		organization: 'Beneran Indonesia (NGO)',
-		place: 'Jakarta, Indonesia, Online',
+		place: 'Remote · Jakarta, Indonesia',
 		description: [
 			'Full Stack Developer for their LMS Website<br />pusakawan.id and their back-office<br />website for the LMS',
 			'Current maintainer of their Android<br />application: Pusakawan'
 		]
-	}
+	},
+	{
+		date: '07/2025 - Present',
+		title: 'Various Roles',
+		organization: 'Indonesian Students\' Association<br /> in China',
+		place: 'Online · Wuhan, China',
+		description: [
+			"Secretary in South Region of Indonesian Students' Association in China, Writes important documents, coordinate meetings inter-branches and make key decisions",
+			"Head of People's Development Department in Wuhan Branch of Indonesian Students' Association in China. Coordinates several work programmes in Wuhan with 5 committees members. 7 work programmes have been successfully conducted"
+		]
+	},
 ];
 
 export const experiences: Experience[] = [
@@ -30,11 +40,11 @@ export const experiences: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Software Engineer',
 		organization: hrefify({
-				child: 'Beneran Indonesia (NGO)',
-				link: 'https://beneranindonesia.id/',
-				title: 'Check their website!',
-				className: 'no-underline'
-			}),
+			child: 'Beneran Indonesia (NGO)',
+			link: 'https://beneranindonesia.id/',
+			title: 'Check their website!',
+			className: 'no-underline'
+		}),
 		place: 'Jakarta, Indonesia · Remote',
 		description: [
 			"Beneran Indonesia is a non-profit organization specializing in character development and ethics/citizenship education. We deliver relevant and engaging learning experiences through games, adventures, interactive classes, and volunteer activities.",
@@ -45,9 +55,9 @@ export const experiences: Experience[] = [
 				title: 'Pusakawan',
 				className: 'hover:mx-1'
 			})}
-			 with Django, Next.js (TypeScript), MaterialUI, PostgreSQL, AWS EB & S3. <br />
-			 Features: authentication, user profile edit, enrollment to classes (paid or free), payment gateway (Xendit), and Articulate Storyline embed`,
-			'Current developer for their LMS back-office website with React (TypeScript + Vite), Refine.js & shadcn',
+			 with Django + Firebase + PostgreSQL for backend & database, Next.js (TypeScript), MaterialUI for frontend, and Vercel + AWS Load Balancer, EB & S3 for deployment. <br />
+			 Features: authentication (Firebase), user profile (Django + PostgreSQL), enrollment to classes (paid or free), payment gateway (Xendit), and activity videos embed using Articulate Storyline`,
+			'Current developer for their LMS back-office website with React 21 (TypeScript + Vite), Refine.js & shadcn',
 			'Current maintainer of their Android application: Pusakawan, an app that helps the teachers and students to play games for their in real life program purposes using Flutter.',
 			'Creates internal automation scripts for company purposes using Python and JavaScript.'
 		],
@@ -68,14 +78,30 @@ export const experiences: Experience[] = [
 	},
 
 	{
+		date: '07/2025 - 09/2026',
+		title: 'AI Mentor',
+		organization: hrefify({
+			child: 'Generation Girl Indonesia (NGO)',
+			link: 'https://generationgirl.org/',
+			title: 'Check their website!',
+			className: 'no-underline'
+		}),
+		place: 'Indonesia · Remote',
+		description: [
+			'Facilitated hundreds of Indonesian participants of all age and background about AI. Collaborated with other facilitator to create engaging classes of 2 hours duration each.'
+		],
+		skills: ['Mentoring', 'Artificial Intelligence']
+	},
+
+	{
 		date: '05/2025 - 07/2025',
 		title: 'International Relations Officer',
 		organization: hrefify({
-				child: 'HOPE International 厚溥国际',
-				link: 'https://www.instagram.com/hopeinternational_id/',
-				title: 'Check their instagram account!',
-				className: 'no-underline'
-			}),
+			child: 'HOPE International 厚溥国际',
+			link: 'https://www.instagram.com/hopeinternational_id/',
+			title: 'Check their instagram account!',
+			className: 'no-underline'
+		}),
 		place: 'Wuhan, Hubei, China',
 		description: [
 			'Translated key business documents (e.g., contracts, proposals, ppt) from Indonesian to Chinese and English, and vice versa, ensuring accuracy and maintaining the original professional tone.',
@@ -91,21 +117,7 @@ export const experiences: Experience[] = [
 		]
 	},
 
-	{
-		date: '07/2025 - 08/2025',
-		title: 'AI Trainer',
-		organization: hrefify({
-				child: 'Generation Girl Indonesia (NGO)',
-				link: 'https://generationgirl.org/',
-				title: 'Check their website!',
-				className: 'no-underline'
-			}),
-		place: 'Indonesia · Remote',
-		description: [
-			'Facilitated hundreds of Indonesian participants of all age and background about AI. Collaborated with other facilitator to create engaging classes of 2 hours duration each.'
-		],
-		skills: ['Mentoring', 'Artificial Intelligence']
-	},
+
 
 	{
 		date: '09/2024 - 12/2024',
@@ -124,11 +136,11 @@ export const experiences: Experience[] = [
 		date: '06/2023 - 07/2023',
 		title: 'Coding Community Mentor',
 		organization: hrefify({
-				child: 'Stanford University: Code In Place',
-				link: 'https://codeinplace.stanford.edu/',
-				title: 'Check their website!',
-				className: 'no-underline'
-			}),
+			child: 'Stanford University: Code In Place',
+			link: 'https://codeinplace.stanford.edu/',
+			title: 'Check their website!',
+			className: 'no-underline'
+		}),
 		place: 'Worldwide · Remote',
 		description: [
 			'Taught foundational Computer Science concepts to a global group of 10 learners over 6 weeks',
@@ -177,17 +189,17 @@ export const projects: Experience[] = [
 		title: "Sarah's Snaps",
 		organization: 'My photography portofolio',
 		place: hrefifyProjects({
-            website: {
-                title: "Go to Sarah's Snaps Website",
-                link: 'https://sarahs-snaps.vercel.app/',
-                child: 'https://sarahs-snaps.vercel.app/'
-            },
-            github: {
-                title: "Go to Sarah's Snaps Github",
-                link: 'https://github.com/sarahT04/sarahs-snaps',
-                child: 'https://github.com/sarahT04/sarahs-snaps'
-            }
-        }),
+			website: {
+				title: "Go to Sarah's Snaps Website",
+				link: 'https://sarahs-snaps.vercel.app/',
+				child: 'https://sarahs-snaps.vercel.app/'
+			},
+			github: {
+				title: "Go to Sarah's Snaps Github",
+				link: 'https://github.com/sarahT04/sarahs-snaps',
+				child: 'https://github.com/sarahT04/sarahs-snaps'
+			}
+		}),
 		description: ['See how I see different countries. All shot from Xiaomi 14 Ultra'],
 		skills: ['Astro', 'MDX', 'ImageKit', 'Photography']
 	},
@@ -195,18 +207,18 @@ export const projects: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Classworks',
 		organization: 'My homework and notes from university classes and projects that I find interesting',
-        place: hrefifyProjects({
-            website: {
-                title: 'Go to see my classworks',
-			link: 'https://sarahs-classwork.vercel.app/',
-			child: 'https://sarahs-classwork.vercel.app/'
-            },
-            // github: {
-            //     title: "Go to see the Github repo",
-            //     link: '',
-            //     child: ''
-            // }
-        }),
+		place: hrefifyProjects({
+			website: {
+				title: 'Go to see my classworks',
+				link: 'https://sarahs-classwork.vercel.app/',
+				child: 'https://sarahs-classwork.vercel.app/'
+			},
+			// github: {
+			//     title: "Go to see the Github repo",
+			//     link: '',
+			//     child: ''
+			// }
+		}),
 		description: ['My classworks. Mostly accomplishing projects using C++ and Python'],
 		skills: ['C++', 'Python', 'Notetaking']
 	},
@@ -215,12 +227,12 @@ export const projects: Experience[] = [
 		title: 'Advent of Code',
 		organization: 'Solutions for Advent of Code using Python',
 		place: hrefifyProjects({
-            github: {
-                title: 'Go to Github repository',
-                link: 'https://github.com/sarahT04/advent-of-code',
-                child: 'https://github.com/sarahT04/advent-of-code'
-            }
-        }),
+			github: {
+				title: 'Go to Github repository',
+				link: 'https://github.com/sarahT04/advent-of-code',
+				child: 'https://github.com/sarahT04/advent-of-code'
+			}
+		}),
 		description: ['Currently available: Year 2015'],
 		skills: ['Python', 'Puzzle Solving']
 	},
@@ -230,17 +242,17 @@ export const projects: Experience[] = [
 		title: 'META Front-End Capstone',
 		organization: "Front-End Capstone project for META's Front-End Developer Certification",
 		place: hrefifyProjects({
-            website: {
-                title: 'Go to see the website',
-                link: 'https://little-lemon-saraht04.vercel.app/',
-                child: 'https://little-lemon-saraht04.vercel.app/'
-            },
-            github: {
-                title: 'Go to Github repository',
-                link: 'https://github.com/sarahT04/meta-capstone',
-                child: 'https://github.com/sarahT04/meta-capstone'
-            }
-        }),
+			website: {
+				title: 'Go to see the website',
+				link: 'https://little-lemon-saraht04.vercel.app/',
+				child: 'https://little-lemon-saraht04.vercel.app/'
+			},
+			github: {
+				title: 'Go to Github repository',
+				link: 'https://github.com/sarahT04/meta-capstone',
+				child: 'https://github.com/sarahT04/meta-capstone'
+			}
+		}),
 		description: [
 			'Little Lemon is a fictional restaraurant that integrates their business into the online platform.',
 			"A mockup website of restaurant's background and table reservation"
@@ -253,17 +265,17 @@ export const projects: Experience[] = [
 		title: 'Reports',
 		organization: "A simple CRUD website for teacher's reports of a student's inline skates performance.",
 		place: hrefifyProjects({
-            website: {
-                title: 'Go to see the website',
-                link: 'https://reports-saraht04.vercel.app/',
-                child: 'https://reports-saraht04.vercel.app/'
-            },
-            github: {
-                title: 'Go to Github repository',
-                link: 'https://github.com/sarahT04/reports',
-                child: 'https://github.com/sarahT04/reports'
-            }
-        }),
+			website: {
+				title: 'Go to see the website',
+				link: 'https://reports-saraht04.vercel.app/',
+				child: 'https://reports-saraht04.vercel.app/'
+			},
+			github: {
+				title: 'Go to Github repository',
+				link: 'https://github.com/sarahT04/reports',
+				child: 'https://github.com/sarahT04/reports'
+			}
+		}),
 		description: [
 			"Was made to create printable reports of each of my students performance for my inline skates coaching job"
 		],
@@ -275,12 +287,12 @@ export const projects: Experience[] = [
 		title: 'Random Quote Generator',
 		organization: 'A react app that has an API to call a random quote and generating it.',
 		place: hrefifyProjects({
-            github: {
-                title: 'Go to Github repository',
-                link: 'https://github.com/sarahT04/random-quote-generator',
-                child: 'https://github.com/sarahT04/random-quote-generator'
-            }
-        }),
+			github: {
+				title: 'Go to Github repository',
+				link: 'https://github.com/sarahT04/random-quote-generator',
+				child: 'https://github.com/sarahT04/random-quote-generator'
+			}
+		}),
 		description: [],
 		skills: ['React']
 	},
@@ -290,12 +302,12 @@ export const projects: Experience[] = [
 		title: 'Number Rain',
 		organization: "It is just printing a bunch of numbers as if it's raining :) ",
 		place: hrefifyProjects({
-            github: {
-                title: 'Go to Github repository',
-                link: 'https://github.com/sarahT04/NumberRain',
-                child: 'https://github.com/sarahT04/NumberRain'
-            }
-        }),
+			github: {
+				title: 'Go to Github repository',
+				link: 'https://github.com/sarahT04/NumberRain',
+				child: 'https://github.com/sarahT04/NumberRain'
+			}
+		}),
 		description: [],
 		skills: ['Python']
 	}
@@ -351,24 +363,24 @@ export const organizations: Experience[] = [
 	{
 		date: '11/2025 - 04/2026',
 		title: 'Tech Division Committee',
-		organization: 'Asian Scholars International Conference',
+		organization: 'Asian Scholars International Conference 2026',
 		place: 'Nanjing, Jiangsu, China',
 		description: [
-			"Asian Scholars’ International Conference (ASIC), hosted for the first time by Perluni Tiongkok in collaboration with PPI Tiongkok and PPIT Nanjing, is a flagship international forum designed to strengthen research partnerships and innovation across the Asia-Pacific.",
-			'Helped to develop and manage the official conference website, handled online registration system and database (forms, QR code)',
-			"Became the moderator for one of their forum titled: 'AI Optimization in Scientific Research and Publication"
+			"Asian Scholars' International Conference (ASIC), hosted for the first time by Perluni Tiongkok in collaboration with PPI Tiongkok and PPIT Nanjing, is a flagship international forum designed to strengthen research partnerships and innovation across the Asia-Pacific.",
+			'Coordinator for the livestreaming system. Read the proccess here: ',
+			"Became the moderator for one of their forum titled: 'AI Optimization in Scientific Research and Publication'"
 		],
-		skills: ['Public Speaking', 'Teamwork', 'General IT Skills']
+		skills: ['Public Speaking', 'Teamwork', 'General IT Skills', "OBS", 'Virtual Audio', 'Live-streaming']
 	},
 
 	{
 		date: '11/2025',
 		title: 'Event Coordinator',
-		organization: "The Organizer's Class: ",
+		organization: "The Organizer's Class: Mastering Event Management and Leadership",
 		place: 'China · Remote',
 		description: [
 			"Organizer's Class is a webinar featuring six speakers from various cities. This webinar is aimed to equip participants with professional competencies in event management. This activity combines theoretical material with practical experience sharing to ensure participants are able to execute their organization's work programs systematically and impactfully.",
-			"Helped with the event's ideation, invited the speakers, and coordinated the MC & Moderator"
+			"In charge of event's ideation, invited the speakers, and coordinated the entire flow of the webinar including MC & Moderator"
 		],
 		skills: ['Event Coordinating', 'Public Relations', 'Webinar Coordination']
 	},

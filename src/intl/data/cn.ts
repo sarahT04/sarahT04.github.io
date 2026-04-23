@@ -22,6 +22,16 @@ export const sidebarExperiences: Experience[] = [
 			'负责他们的 LMS 主站<br />pusakawan.id 以及 LMS 后台<br />网站的全栈开发',
 			'维护他们的 Android 应用：Pusakawan'
 		]
+	},
+	{
+		date: '2025/07 - 至今',
+		title: '多重角色',
+		organization: "在华印尼学生协会<br />（中国）",
+		place: '线上 · 中国 武汉',
+		description: [
+			'担任在华印尼学生协会南部区域秘书，负责撰写重要文件、协调分会间会议并参与关键决策。',
+			'担任武汉分会人才发展部部长，与 5 名委员协同推进多项工作项目，已成功执行 7 个项目。'
+		]
 	}
 ];
 
@@ -45,11 +55,11 @@ export const experiences: Experience[] = [
 				title: 'Pusakawan',
 				className: 'hover:mx-1'
 			})}
-			使用 Django、Next.js（TypeScript）、MaterialUI、PostgreSQL、AWS EB 和 S3。<br />
-			功能包括：登录认证、编辑用户资料、课程注册（付费或免费）、支付网关（Xendit）和 Articulate Storyline 嵌入`,
-			'负责 LMS 后台网站开发（React（TypeScript + Vite）、Refine.js 和 shadcn）',
-			'维护 Android 应用：Pusakawan，一款帮助教师和学生为真实项目玩游戏的应用，使用 Flutter 开发。',
-			'用 Python 和 JavaScript 写内部自动化脚本'
+			 使用 Django + Firebase + PostgreSQL 作为后端和数据库，Next.js（TypeScript）、MaterialUI 作为前端，Vercel + AWS 负载均衡器、EB 和 S3 作为部署。<br />
+			 功能包括：身份验证（Firebase）、用户资料（Django + PostgreSQL）、课程注册（付费或免费）、支付网关（Xendit）和使用 Articulate Storyline 嵌入的活动视频`,
+		'负责 LMS 后台网站开发，使用 React 21（TypeScript + Vite）、Refine.js 和 shadcn',
+		'维护 Android 应用：Pusakawan，一款帮助教师和学生为其真实项目目的玩游戏的应用，使用 Flutter 开发。',
+		'为公司目的创建 Python 和 JavaScript 内部自动化脚本。'
 		],
 		skills: [
 			'TypeScript',
@@ -86,7 +96,7 @@ export const experiences: Experience[] = [
 	},
 
 	{
-		date: '2025/07 - 2025/08',
+		date: '2025/07 - 2026/09',
 		title: 'AI 讲师',
 		organization: hrefify({
 				child: 'Generation Girl Indonesia（印尼非政府组织）',

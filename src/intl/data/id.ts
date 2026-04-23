@@ -17,10 +17,20 @@ export const sidebarExperiences: Experience[] = [
 		date: '09/2023 - Present',
 		title: 'Software Engineer',
 		organization: 'Beneran Indonesia (NGO)',
-		place: 'Jakarta, Indonesia, Online',
+		place: 'Remote · Jakarta, Indonesia',
 		description: [
 			'Full stack developer untuk website LMS<br />pusakawan.id dan website<br />back-office LMS',
 			'Maintainer aplikasi Android mereka: Pusakawan'
+		]
+	},
+	{
+		date: '07/2025 - Present',
+		title: 'Berbagai Peran',
+		organization: "Indonesian Students' Association<br /> in China",
+		place: 'Online · Wuhan, China',
+		description: [
+			"Sekretaris di South Region of Indonesian Students' Association in China, menulis dokumen penting, mengoordinasikan rapat antar-cabang, dan ikut mengambil keputusan penting",
+			"Kepala Departemen Pengembangan Masyarakat di Wuhan Branch of Indonesian Students' Association in China. Mengoordinasikan beberapa program kerja di Wuhan bersama 5 anggota komite. Sebanyak 7 program kerja telah berhasil dilaksanakan"
 		]
 	}
 ];
@@ -32,24 +42,24 @@ export const experiences: Experience[] = [
 		organization: hrefify({
 				child: 'Beneran Indonesia (NGO)',
 				link: 'https://beneranindonesia.id/',
-				title: 'Check their website!',
+				title: 'Kunjungi situs mereka!',
 				className: 'no-underline'
 			}),
 		place: 'Jakarta, Indonesia · Remote',
 		description: [
 			"Beneran Indonesia adalah organisasi nirlaba yang berspesialisasi dalam pengembangan karakter dan pendidikan etika/kewarganegaraan. Kami memberikan pengalaman belajar yang relevan dan menarik melalui permainan, petualangan, kelas interaktif, dan kegiatan sukarela.",
-			`Sole full stack developer untuk website Learning Management System (LMS):
+		`Satu-satunya full stack developer untuk website Learning Management System (LMS): 
 			${hrefify({
 				child: 'pusakawan.id',
 				link: 'https://pusakawan.id/',
 				title: 'Pusakawan',
 				className: 'hover:mx-1'
 			})}
-			menggunakan Django, Next.js (TypeScript), MaterialUI, PostgreSQL, AWS EB & S3. <br />
-			Fitur: autentikasi, edit profil pengguna, pendaftaran ke kelas (berbayar atau gratis), payment gateway (Xendit), dan embed Articulate Storyline`,
-			'Developer untuk website back-office LMS (React (TypeScript + Vite), Refine.js & shadcn)',
-			'Maintainer aplikasi Android: Pusakawan, aplikasi yang membantu guru dan siswa bermain game untuk keperluan program nyata mereka menggunakan Flutter.',
-			'Membuat script automasi internal menggunakan Python dan JavaScript'
+			 menggunakan Django + Firebase + PostgreSQL untuk backend & database, Next.js (TypeScript), MaterialUI untuk frontend, dan Vercel + AWS Load Balancer, EB & S3 untuk deployment. <br />
+			 Fitur: autentikasi (Firebase), profil pengguna (Django + PostgreSQL), pendaftaran ke kelas (berbayar atau gratis), payment gateway (Xendit), dan penyematan video aktivitas menggunakan Articulate Storyline`,
+		'Saat ini mengembangkan website back-office LMS dengan React 21 (TypeScript + Vite), Refine.js & shadcn',
+		'Saat ini menjadi maintainer aplikasi Android mereka: Pusakawan, aplikasi yang membantu guru dan siswa bermain game untuk kebutuhan program dunia nyata mereka menggunakan Flutter.',
+		'Membuat skrip otomasi internal untuk kebutuhan perusahaan menggunakan Python dan JavaScript.'
 		],
 		skills: [
 			'TypeScript',
@@ -73,30 +83,30 @@ export const experiences: Experience[] = [
 		organization: hrefify({
 				child: 'HOPE International 厚溥国际',
 				link: 'https://www.instagram.com/hopeinternational_id/',
-				title: 'Check their instagram account!',
+				title: 'Lihat akun Instagram mereka!',
 				className: 'no-underline'
 			}),
 		place: 'Wuhan, Hubei, China',
 		description: [
-			'Menerjemahkan dokumen bisnis penting (kontrak, proposal, PPT, dll) dari Indonesia ke Mandarin dan Inggris, dan sebaliknya, dengan menjaga akurasi dan nada profesional.',
-			'Menulis email dan dokumen bisnis dalam bahasa Inggris dan Indonesia untuk stakeholder Indonesia, mempermudah komunikasi dan negosiasi.',
-			'Terlibat dalam pembuatan poster, kerja sama dengan politeknik, serta menjadi HR untuk job fair di beberapa politeknik di Indonesia'
+			'Menerjemahkan dokumen bisnis penting (misalnya kontrak, proposal, dan presentasi) dari bahasa Indonesia ke bahasa Mandarin dan Inggris, serta sebaliknya, dengan menjaga akurasi dan nada profesional asli.',
+			'Menulis email dan membuat dokumen bisnis dalam bahasa Inggris dan Indonesia untuk para pemangku kepentingan di Indonesia, sehingga komunikasi berjalan jelas dan negosiasi lebih efektif.',
+			'Terlibat dalam pembuatan poster digital, menjalin kerja sama dengan politeknik, serta menjadi HR untuk Job Fair di beberapa politeknik di Indonesia'
 		],
 		skills: ['Translation', 'Personal Assistant', 'Partnership', 'HR', 'Communication and Teamwork']
 	},
 
 	{
-		date: '07/2025 - 08/2025',
-		title: 'AI Trainer',
+		date: '07/2025 - 09/2026',
+		title: 'Mentor AI',
 		organization: hrefify({
 				child: 'Generation Girl Indonesia (NGO)',
 				link: 'https://generationgirl.org/',
-				title: 'Check their website!',
+				title: 'Kunjungi situs mereka!',
 				className: 'no-underline'
 			}),
 		place: 'Indonesia · Remote',
 		description: [
-			'Memfasilitasi ratusan peserta Indonesia dari berbagai usia dan latar belakang tentang AI. Berkolaborasi dengan fasilitator lain untuk membuat kelas berdurasi 2 jam.'
+			'Memfasilitasi ratusan peserta Indonesia dari berbagai usia dan latar belakang tentang AI. Berkolaborasi dengan fasilitator lain untuk membuat kelas yang menarik dengan durasi 2 jam per sesi.'
 		],
 		skills: ['Mentoring', 'Artificial Intelligence']
 	},
@@ -107,9 +117,9 @@ export const experiences: Experience[] = [
 		organization: 'International Education College, China University of Geosciences',
 		place: 'Wuhan, Hubei, China',
 		description: [
-			'Memfasilitasi komunikasi antara mahasiswa internasional dan staf dengan interpretasi real-time dari bahasa Inggris ke Mandarin.',
-			'Mengurus dan menjaga dokumen penting mahasiswa.',
-			'Mengelola dan merapikan banyak dokumen mahasiswa.'
+			'Memfasilitasi komunikasi antara mahasiswa internasional dan staf dengan memberikan penerjemahan langsung dari bahasa Inggris ke bahasa Mandarin, sehingga pertanyaan mahasiswa dapat dipahami dengan jelas.',
+			'Memproses dan memelihara dokumen penting mahasiswa.',
+			'Mengelola dan menata volume arsip mahasiswa dalam jumlah besar.'
 		],
 		skills: ['Translation', 'Communication and Teamwork', 'Administration']
 	},
@@ -120,13 +130,13 @@ export const experiences: Experience[] = [
 		organization: hrefify({
 				child: 'Stanford University: Code In Place',
 				link: 'https://codeinplace.stanford.edu/',
-				title: 'Check their website!',
+				title: 'Kunjungi situs mereka!',
 				className: 'no-underline'
 			}),
 		place: 'Worldwide · Remote',
 		description: [
-			'Mengajar dasar-dasar Ilmu Komputer ke 10 peserta dari seluruh dunia selama 6 minggu',
-			'Mendesain sesi mingguan yang engaging hingga mencapai 85% completion rate'
+			'Mengajar konsep dasar Ilmu Komputer kepada kelompok global berisi 10 peserta selama 6 minggu.',
+			'Merancang sesi mingguan yang menarik, berkontribusi pada tingkat penyelesaian kursus sebesar 85%.'
 		],
 		skills: ['Mentoring', 'Computer Science', 'Global Community']
 	},
@@ -137,7 +147,7 @@ export const experiences: Experience[] = [
 		organization: 'Generation Girl Indonesia (NGO)',
 		place: 'Indonesia · Remote',
 		description: [
-			"Mentor bahasa Inggris untuk GenG's Build a Website Winter Club. Dalam 5 hari, mengajar remaja perempuan membuat website dengan HTML, CSS, dan JavaScript."
+			"Menjadi mentor bahasa Inggris untuk Build a Website Winter Club dari GenG. Dalam 5 hari, mengajar remaja putri yang bercita-cita di bidang teknologi untuk membuat website mereka sendiri menggunakan HTML, CSS, dan JavaScript."
 		],
 		skills: ['Mentoring', 'Web Development']
 	},
@@ -148,7 +158,7 @@ export const experiences: Experience[] = [
 		organization: 'PT. Autory Muda Indonesia',
 		place: 'Jakarta, Indonesia · Remote',
 		description: [
-			"Internship 3 bulan di perusahaan UMKM. Menggunakan Joomla 4.0, saya membuat website dari nol untuk memenuhi kebutuhan perusahaan."
+			'Magang selama 3 bulan di perusahaan UMKM. Menggunakan Joomla 4.0, saya membangun website dari nol sesuai kebutuhan dan spesifikasi perusahaan.'
 		],
 		skills: ['Communication and Teamwork', 'Business Management']
 	},
@@ -158,7 +168,7 @@ export const experiences: Experience[] = [
 		organization: 'Rollerskool · PT. Autory Muda Indonesia',
 		place: 'Jakarta, Indonesia',
 		description: [
-			'Melatih ratusan anak dan dewasa dari berbagai usia di ruang publik, gedung olahraga, dan sekolah internasional sesuai kurikulum inline skating'
+			'Melatih ratusan anak-anak dan orang dewasa dari berbagai usia di ruang publik, gedung olahraga, dan sekolah internasional sesuai kurikulum inline skating.'
 		],
 		skills: ['Communication and Teamwork', 'Global Community', 'Inline Skates', 'Coaching']
 	}
@@ -404,9 +414,9 @@ export const certificates: Experience[] = [
 		place: 'Wuhan, Hubei, China',
 		description: [
 			"Sebagai international student ambassador, saya mewakili negara dan bertugas membuat konten video, desain grafis, dan copywriting untuk akun WeChat universitas",
-			`Main Social Media Manager untuk akun Instagram universitas
+			`Manajer Media Sosial utama untuk akun Instagram universitas
 			${hrefify({
-				title: 'See the account',
+				title: 'Lihat akunnya',
 				child: '(@studyatcug)',
 				link: 'https://www.instagram.com/studyatcug'
 			})}
@@ -434,9 +444,9 @@ export const certificates: Experience[] = [
 		place: 'Online',
 		description: [
 			'Menyelesaikan 3 proyek Full Stack (React) dan 6 kelas dengan peer review dari Coursera.',
-			`Certificate:
+			`Sertifikat:
 			${hrefify({
-				title: 'See the certificate',
+				title: 'Lihat sertifikat',
 				child: 'https://www.coursera.org/account/accomplishments/certificate/TXU2LBRUESMA',
 				link: 'https://www.coursera.org/account/accomplishments/certificate/TXU2LBRUESMA',
 				className: 'hover:ml-2'
@@ -453,9 +463,9 @@ export const certificates: Experience[] = [
 		place: 'Online',
 		description: [
 			'Menyelesaikan 6 proyek Full Stack (Django + Javascript) dengan peer review dari Harvard.',
-			`Certificate:
+			`Sertifikat:
 			${hrefify({
-				title: 'See the certificate',
+				title: 'Lihat sertifikat',
 				child: 'https://cs50.harvard.edu/certificates/de7180a5-278f-486d-a49e-485f0bfe0776',
 				link: 'https://cs50.harvard.edu/certificates/de7180a5-278f-486d-a49e-485f0bfe0776',
 				className: 'hover:ml-2'
